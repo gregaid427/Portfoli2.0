@@ -127,7 +127,7 @@ export const projects = [
     ],
   },
   {
-    name: "Tribes Premium",
+    name: "Tribes Premium Mobile",
     type: "mobile",
     stack: ["Flutter", "Dart"],
     description:
@@ -155,7 +155,7 @@ export const projects = [
     images: [tripstoghanaWeb1, tripstoghanaWeb2, tripstoghanaWeb3, tripstoghanaWeb4],
   },
   {
-    name: "Tripstoghana",
+    name: "Tripstoghana Mobile",
     type: "mobile",
     stack: ["Flutter", "Dart"],
     description: "Mobile companion for browsing tours and booking experiences on the move.",
@@ -169,7 +169,7 @@ export const projects = [
     images: [tripstoghanaMobile1, tripstoghanaMobile2, tripstoghanaMobile3, tripstoghanaMobile4],
   },
   {
-    name: "Skye Bank Banking Apps",
+    name: "Skye Bank App",
     type: "mobile",
     stack: ["Flutter", "Dart"],
     description:
@@ -242,7 +242,7 @@ export const projects = [
     images: [pentpreneurWeb1, pentpreneurWeb2, pentpreneurWeb3, pentpreneurWeb4],
   },
   {
-    name: "Pentpreneur Church Business App",
+    name: "Pentpreneur Church Business App Mobile",
     type: "mobile",
     stack: ["Flutter", "Dart"],
     description:
