@@ -157,7 +157,8 @@ export default function Projects() {
           <h2 className="mt-3 font-display font-bold text-3xl md:text-4xl text-white">Selected projects</h2>
           <p className="mt-4 text-mist/75">
             Web platforms and their mobile counterparts, shipped for clients across fintech, education,
-            tourism, and faith-based organizations.
+            tourism, and faith-based organizations — including publishing apps to the App Store and Play
+            Store myself.
           </p>
         </div>
       </div>

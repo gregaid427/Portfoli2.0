@@ -10,7 +10,8 @@ const PILLARS = [
   {
     icon: Smartphone,
     title: "Mobile Delivery",
-    description: "Cross-platform apps in Flutter/Dart, shipped for real banking and survey products across three countries.",
+    description:
+      "Cross-platform apps in Flutter/Dart, shipped for real banking and survey products across three countries — including publishing to the App Store and Play Store myself.",
   },
   {
     icon: Cloud,
