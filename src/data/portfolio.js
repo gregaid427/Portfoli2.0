@@ -1,3 +1,53 @@
+import tribesWeb1 from "../assets/projects/tribes-premium-web-1.jpg";
+import tribesWeb2 from "../assets/projects/tribes-premium-web-2.jpg";
+import tribesWeb3 from "../assets/projects/tribes-premium-web-3.jpg";
+import tribesMobile1 from "../assets/projects/tribes-premium-mobile-1.jpg";
+import tribesMobile2 from "../assets/projects/tribes-premium-mobile-2.jpg";
+import tribesMobile3 from "../assets/projects/tribes-premium-mobile-3.jpg";
+import tribesMobile4 from "../assets/projects/tribes-premium-mobile-4.jpg";
+import fortegateWeb1 from "../assets/projects/fortegate-web-1.jpg";
+import fortegateWeb2 from "../assets/projects/fortegate-web-2.jpg";
+import fortegateWeb3 from "../assets/projects/fortegate-web-3.jpg";
+import fortegateWeb4 from "../assets/projects/fortegate-web-4.jpg";
+import fortegateUserMgmt1 from "../assets/projects/fortegate-usermgmt-1.jpg";
+import fortegateUserMgmt2 from "../assets/projects/fortegate-usermgmt-2.jpg";
+import fortegateUserMgmt3 from "../assets/projects/fortegate-usermgmt-3.jpg";
+import tripstoghanaWeb1 from "../assets/projects/tripstoghana-web-1.jpg";
+import tripstoghanaWeb2 from "../assets/projects/tripstoghana-web-2.jpg";
+import tripstoghanaWeb3 from "../assets/projects/tripstoghana-web-3.jpg";
+import tripstoghanaWeb4 from "../assets/projects/tripstoghana-web-4.jpg";
+import tripstoghanaMobile1 from "../assets/projects/tripstoghana-mobile-1.jpg";
+import tripstoghanaMobile2 from "../assets/projects/tripstoghana-mobile-2.jpg";
+import tripstoghanaMobile3 from "../assets/projects/tripstoghana-mobile-3.jpg";
+import tripstoghanaMobile4 from "../assets/projects/tripstoghana-mobile-4.jpg";
+import pentpreneurWeb1 from "../assets/projects/pentpreneur-web-1.jpg";
+import pentpreneurWeb2 from "../assets/projects/pentpreneur-web-2.jpg";
+import pentpreneurWeb3 from "../assets/projects/pentpreneur-web-3.jpg";
+import pentpreneurWeb4 from "../assets/projects/pentpreneur-web-4.jpg";
+import pentpreneurMobile1 from "../assets/projects/pentpreneur-mobile-1.jpg";
+import pentpreneurMobile2 from "../assets/projects/pentpreneur-mobile-2.jpg";
+import pentpreneurMobile3 from "../assets/projects/pentpreneur-mobile-3.jpg";
+import pentpreneurMobile4 from "../assets/projects/pentpreneur-mobile-4.jpg";
+import skyebankMobile1 from "../assets/projects/skyebank-mobile-1.jpg";
+import skyebankMobile2 from "../assets/projects/skyebank-mobile-2.jpg";
+import skyebankMobile3 from "../assets/projects/skyebank-mobile-3.jpg";
+import skyebankMobile4 from "../assets/projects/skyebank-mobile-4.jpg";
+import schoolmsWeb1 from "../assets/projects/schoolms-web-1.jpg";
+import schoolmsWeb2 from "../assets/projects/schoolms-web-2.jpg";
+import schoolmsWeb3 from "../assets/projects/schoolms-web-3.jpg";
+import schoolmsWeb4 from "../assets/projects/schoolms-web-4.jpg";
+import schoolmsMobile1 from "../assets/projects/schoolms-mobile-1.jpg";
+import schoolmsMobile2 from "../assets/projects/schoolms-mobile-2.jpg";
+import schoolmsMobile3 from "../assets/projects/schoolms-mobile-3.jpg";
+import schoolmsMobile4 from "../assets/projects/schoolms-mobile-4.jpg";
+import fortegateCommunity1 from "../assets/projects/fortegate-community-1.jpg";
+import fortegateCommunity2 from "../assets/projects/fortegate-community-2.jpg";
+import fortegateCommunity3 from "../assets/projects/fortegate-community-3.jpg";
+import fortegateCommunity4 from "../assets/projects/fortegate-community-4.jpg";
+import fortegateCommunity5 from "../assets/projects/fortegate-community-5.jpg";
+import fortegateCollect1 from "../assets/projects/fortegate-collect-1.jpg";
+import fortegateCollect2 from "../assets/projects/fortegate-collect-2.jpg";
+
 export const profile = {
   name: "Gregory Aidoo",
   role: "Full Stack Web & Mobile Developer",
@@ -64,73 +114,177 @@ export const skillGroups = [
 
 export const projects = [
   {
-    name: "Fortegate Survey Application",
+    name: "Tribes Premium",
+    type: "web",
+    stack: ["React.js", "Node.js", "Tailwind CSS"],
     description:
-      "Field survey platform for data collection at scale, with an admin web console and a companion mobile app for offline-friendly capture.",
-    stack: ["Flutter", "Dart", "PHP"],
-    mobile: true,
+      "Storefront for a premium spirits brand — product catalog with direct checkout, order tracking, and an events hub for tastings and pop-ups.",
+    links: [{ label: "tribesdistilleries.com", href: "https://tribesdistilleries.com" }],
+    images: [
+      tribesWeb1,
+      tribesWeb2,
+      tribesWeb3,
+    ],
   },
   {
-    name: "YesSchool Management System",
+    name: "Tribes Premium",
+    type: "mobile",
+    stack: ["Flutter", "Dart"],
     description:
-      "End-to-end school management web app covering admissions, records, and day-to-day academic operations.",
-    stack: ["React.js", "Node.js", "Express.js"],
-    mobile: false,
+      "Companion app for browsing the catalog, checking out as a guest, tracking events, and watching mixology recipes.",
+    links: [
+      {
+        label: "Play Store",
+        href: "https://play.google.com/store/apps/details?id=com.tribesdistilleries.tribes_mobile&pcampaignid=web_share",
+      },
+    ],
+    images: [tribesMobile1, tribesMobile2, tribesMobile3, tribesMobile4],
+  },
+  {
+    name: "Tripstoghana",
+    type: "web",
+    stack: ["React.js", "Node.js"],
+    description:
+      "Tourism booking platform for exploring and booking experiences across Ghana, with dedicated admin and tour-guide portals.",
+    links: [
+      { label: "tripstoghana.com", href: "https://tripstoghana.com" },
+      { label: "tripstoghana.com/admin", href: "https://tripstoghana.com/admin" },
+      { label: "tripstoghana.com/guide", href: "https://tripstoghana.com/guide" },
+    ],
+    images: [tripstoghanaWeb1, tripstoghanaWeb2, tripstoghanaWeb3, tripstoghanaWeb4],
+  },
+  {
+    name: "Tripstoghana",
+    type: "mobile",
+    stack: ["Flutter", "Dart"],
+    description: "Mobile companion for browsing tours and booking experiences on the move.",
+    links: [
+      { label: "App Store", href: "https://apps.apple.com/gh/app/trips2ghana/id6803184184" },
+      {
+        label: "Play Store",
+        href: "https://play.google.com/store/apps/details?id=com.trips2ghana.app&pcampaignid=web_share",
+      },
+    ],
+    images: [tripstoghanaMobile1, tripstoghanaMobile2, tripstoghanaMobile3, tripstoghanaMobile4],
   },
   {
     name: "Skye Bank Banking Apps",
-    description:
-      "Consumer banking apps shipped for Nigeria, Sierra Leone, and Guinea — mobile-first with a companion web layer.",
-    stack: ["Flutter", "Dart", "Node.js", "ASP.NET"],
-    mobile: true,
-  },
-  {
-    name: "Paydem",
-    description: "Mobile payments app focused on fast, reliable peer-to-peer and merchant transactions.",
+    type: "mobile",
     stack: ["Flutter", "Dart"],
-    mobile: true,
+    description:
+      "Consumer banking app covering transfers, loans, investments, beneficiaries, and bill payments across three countries.",
+    links: [
+      {
+        label: "Play Store",
+        href: "https://play.google.com/store/apps/details?id=com.skyecapital.mobile.prod",
+      },
+    ],
+    images: [skyebankMobile1, skyebankMobile2, skyebankMobile3, skyebankMobile4],
   },
   {
-    name: "Green Square",
-    description: "Job hunting platform connecting candidates with listings through a clean, searchable interface.",
-    stack: ["React.js"],
-    mobile: false,
+    name: "Fortegate Survey Application",
+    type: "web",
+    group: "fortegate",
+    stack: ["PHP", "HTML", "CSS"],
+    description: "Public website and admin console for large-scale field survey operations.",
+    links: [
+      { label: "fortegate.net", href: "https://fortegate.net/" },
+      { label: "console2.fortegate.net", href: "https://console2.fortegate.net/" },
+    ],
+    images: [fortegateWeb1, fortegateWeb2, fortegateWeb3, fortegateWeb4],
   },
   {
-    name: "Sresuo Clinic Management System",
-    description: "Clinic operations system for patient records, scheduling, and staff workflows.",
+    name: "Fortegate User Management",
+    type: "web",
+    group: "fortegate",
+    stack: ["React.js", "Node.js", "Express.js"],
+    description:
+      "Admin dashboard for managing surveys, panels, community members, and onboarding analytics across the platform.",
+    links: [{ label: "user-manage.fortegate.net", href: "https://user-manage.fortegate.net/" }],
+    images: [fortegateUserMgmt1, fortegateUserMgmt2, fortegateUserMgmt3],
+  },
+  {
+    name: "Fortegate Community App",
+    type: "mobile",
+    group: "fortegate",
+    stack: ["Flutter", "Dart"],
+    description:
+      "Community-facing app for panel members to sign up, take surveys, and earn and redeem points.",
+    links: [{ label: "Download", href: "https://fortegate.net/download.html" }],
+    images: [
+      fortegateCommunity1,
+      fortegateCommunity2,
+      fortegateCommunity3,
+      fortegateCommunity4,
+      fortegateCommunity5,
+    ],
+  },
+  {
+    name: "Fortegate Collect App",
+    type: "mobile",
+    group: "fortegate",
+    stack: ["Flutter", "Dart"],
+    description: "Field data-collection app built for offline-friendly survey capture by enumerators.",
+    links: [{ label: "Download", href: "https://fortegate.net/download.html" }],
+    images: [fortegateCollect1, fortegateCollect2],
+  },
+  {
+    name: "Pentpreneur Church Business App",
+    type: "web",
     stack: ["React.js", "Node.js"],
-    mobile: false,
+    description:
+      "Business directory and networking platform for a church-run entrepreneur network, with an admin control panel for managing businesses, products, and events.",
+    links: [
+      { label: "Home", href: "http://38.242.225.173:5004/home" },
+      { label: "Admin", href: "http://38.242.225.173:5004/admin" },
+    ],
+    images: [pentpreneurWeb1, pentpreneurWeb2, pentpreneurWeb3, pentpreneurWeb4],
   },
   {
-    name: "Ahafo Tepa Birth & Death Registry",
-    description: "Digital civil registry portal replacing manual record-keeping for a district assembly.",
-    stack: ["PHP", "MySQL"],
-    mobile: false,
+    name: "Pentpreneur Church Business App",
+    type: "mobile",
+    stack: ["Flutter", "Dart"],
+    description:
+      "Companion app for browsing business categories, managing listings, and updating a business profile on the go.",
+    links: [],
+    images: [pentpreneurMobile1, pentpreneurMobile2, pentpreneurMobile3, pentpreneurMobile4],
+  },
+  // Church Management System — commented out for now
+  // {
+  //   name: "Church Management System",
+  //   type: "web",
+  //   stack: ["React.js", "Node.js"],
+  //   description: "Admin platform for managing membership, giving, and events for churches.",
+  //   links: [],
+  //   images: [],
+  // },
+  // {
+  //   name: "Church Management System",
+  //   type: "mobile",
+  //   stack: ["Flutter", "Dart"],
+  //   description: "Member-facing app for giving, event updates, and church communication.",
+  //   links: [],
+  //   images: [],
+  // },
+  {
+    name: "School Management System",
+    type: "web",
+    group: "school-management",
+    stack: ["React.js", "Node.js"],
+    description:
+      "School management platform with dedicated portals for staff (teaching and non-teaching), parents, and students — covering academics, attendance, finance, and administration.",
+    links: [{ label: "raysms.duckdns.org", href: "http://raysms.duckdns.org/" }],
+    images: [schoolmsWeb1, schoolmsWeb2, schoolmsWeb3, schoolmsWeb4],
   },
   {
-    name: "ReachOut Africa",
-    description: "NGO platform for programme visibility, storytelling, and donor engagement.",
-    stack: ["React.js", "Node.js", "MySQL"],
-    mobile: false,
-  },
-  {
-    name: "Exchange Rates App",
-    description: "Live currency conversion tool with a fast, minimal interface.",
-    stack: ["React.js"],
-    mobile: false,
-  },
-  {
-    name: "OptimumPay",
-    description: "Payment platform web app for processing and tracking merchant transactions.",
-    stack: ["React.js"],
-    mobile: false,
-  },
-  {
-    name: "Memory Game",
-    description: "Browser-based memory matching game built for speed and playful UI polish.",
-    stack: ["HTML", "CSS", "JavaScript"],
-    mobile: false,
+    name: "School Management Mobile App",
+    type: "mobile",
+    group: "school-management",
+    stack: ["Flutter", "Dart"],
+    description:
+      "Companion app with dedicated portals for staff (teaching and non-teaching), parents, and students to stay on top of academics on the go.",
+    links: [],
+    images: [schoolmsMobile1, schoolmsMobile2, schoolmsMobile3, schoolmsMobile4],
   },
 ];
 
