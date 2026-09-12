@@ -133,6 +133,7 @@ export const projects = [
     description:
       "Companion app for browsing the catalog, checking out as a guest, tracking events, and watching mixology recipes.",
     links: [
+      { label: "App Store", href: "https://apps.apple.com/gh/app/tribes-premium/id6799750544" },
       {
         label: "Play Store",
         href: "https://play.google.com/store/apps/details?id=com.tribesdistilleries.tribes_mobile&pcampaignid=web_share",
