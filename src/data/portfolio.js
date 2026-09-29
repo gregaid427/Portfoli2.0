@@ -47,6 +47,8 @@ import fortegateCommunity4 from "../assets/projects/fortegate-community-4.jpg";
 import fortegateCommunity5 from "../assets/projects/fortegate-community-5.jpg";
 import fortegateCollect1 from "../assets/projects/fortegate-collect-1.jpg";
 import fortegateCollect2 from "../assets/projects/fortegate-collect-2.jpg";
+import dataplugWeb1 from "../assets/projects/dataplug-web-1.jpg";
+import dataplugWeb2 from "../assets/projects/dataplug-web-2.jpg";
 
 export const profile = {
   name: "Gregory Aidoo",
@@ -167,6 +169,15 @@ export const projects = [
       },
     ],
     images: [tripstoghanaMobile1, tripstoghanaMobile2, tripstoghanaMobile3, tripstoghanaMobile4],
+  },
+  {
+    name: "DataPlug Africa",
+    type: "web",
+    stack: ["React.js", "Node.js", "Tailwind CSS"],
+    description:
+      "E-commerce platform for buying MTN, AirtelTigo, and Telecel data bundles in Ghana, with an admin dashboard for real-time order monitoring and analytics.",
+    links: [],
+    images: [dataplugWeb1, dataplugWeb2],
   },
   {
     name: "Skye Bank App",
