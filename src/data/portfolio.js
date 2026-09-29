@@ -176,7 +176,7 @@ export const projects = [
     stack: ["React.js", "Node.js", "Tailwind CSS"],
     description:
       "E-commerce platform for buying MTN, AirtelTigo, and Telecel data bundles in Ghana, with an admin dashboard for real-time order monitoring and analytics.",
-    links: [],
+    links: [{ label: "Admin", href: "https://dataplugafrica.com/admin.php" }],
     images: [dataplugWeb1, dataplugWeb2],
   },
   {
