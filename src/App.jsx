@@ -4,7 +4,6 @@ import About from "./components/About";
 import Skills from "./components/Skills";
 import Projects from "./components/Projects";
 import WorkAttitude from "./components/WorkAttitude";
-import Experience from "./components/Experience";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 
@@ -18,7 +17,6 @@ function App() {
         <Skills />
         <Projects />
         <WorkAttitude />
-        <Experience />
         <Contact />
       </main>
       <Footer />
