@@ -23,15 +23,18 @@ function WebGallery({ images, alt }) {
   const [hero, ...rest] = images;
 
   return (
-    <div className="max-w-xl">
-      <div className="rounded-xl overflow-hidden border border-violet-glow/20 bg-surface-2">
-        <img src={hero} alt={alt} className="w-full h-auto max-h-56 object-cover" />
+    <div>
+      <div className="h-40 sm:h-48 rounded-xl overflow-hidden border border-violet-glow/20 bg-ink flex items-center justify-center">
+        <img src={hero} alt={alt} className="h-full w-full object-contain" />
       </div>
       {rest.length > 0 && (
         <div className="mt-2 grid grid-cols-2 gap-2">
           {rest.map((src) => (
-            <div key={src} className="rounded-lg overflow-hidden border border-violet-glow/20 bg-surface-2">
-              <img src={src} alt={alt} className="w-full h-auto max-h-28 object-cover" />
+            <div
+              key={src}
+              className="h-20 sm:h-24 rounded-lg overflow-hidden border border-violet-glow/20 bg-ink flex items-center justify-center"
+            >
+              <img src={src} alt={alt} className="h-full w-full object-contain" />
             </div>
           ))}
         </div>
@@ -42,11 +45,11 @@ function WebGallery({ images, alt }) {
 
 function MobileGallery({ images, alt }) {
   return (
-    <div className="flex gap-3 overflow-x-auto pb-1">
+    <div className="flex flex-wrap gap-2">
       {images.map((src) => (
         <div
           key={src}
-          className="shrink-0 w-28 sm:w-32 rounded-2xl overflow-hidden border border-violet-glow/20 bg-surface-2"
+          className="w-[30%] min-w-[5.5rem] rounded-xl overflow-hidden border border-violet-glow/20 bg-ink"
         >
           <img src={src} alt={alt} className="w-full h-auto" />
         </div>
@@ -60,8 +63,8 @@ function ProjectCard({ project, gradient }) {
   const hasImages = project.images?.length > 0;
 
   return (
-    <article className="glow-card rounded-2xl p-6 flex flex-col gap-5 hover:border-violet-glow/40 transition-colors">
-      <div>
+    <article className="glow-card rounded-2xl p-6 flex flex-col sm:flex-row gap-6 hover:border-violet-glow/40 transition-colors">
+      <div className="sm:w-[38%] shrink-0">
         <div className="flex flex-wrap items-center gap-1.5">
           <span className="inline-flex w-fit items-center gap-1.5 rounded-full bg-violet-glow/10 border border-violet-glow/20 px-2.5 py-1 text-[11px] font-medium text-mist/85">
             {isMobile ? <Smartphone size={12} /> : <Globe size={12} />}
@@ -112,21 +115,23 @@ function ProjectCard({ project, gradient }) {
         )}
       </div>
 
-      {hasImages ? (
-        isMobile ? (
-          <MobileGallery images={project.images} alt={project.name} />
+      <div className="sm:w-[62%] min-w-0">
+        {hasImages ? (
+          isMobile ? (
+            <MobileGallery images={project.images} alt={project.name} />
+          ) : (
+            <WebGallery images={project.images} alt={project.name} />
+          )
         ) : (
-          <WebGallery images={project.images} alt={project.name} />
-        )
-      ) : (
-        <div
-          className={`max-w-xl h-40 rounded-xl bg-gradient-to-br ${gradient} flex items-center justify-center`}
-        >
-          <span className="font-display font-extrabold text-3xl text-white/90 tracking-tight">
-            {initials(project.name)}
-          </span>
-        </div>
-      )}
+          <div
+            className={`h-40 rounded-xl bg-gradient-to-br ${gradient} flex items-center justify-center`}
+          >
+            <span className="font-display font-extrabold text-3xl text-white/90 tracking-tight">
+              {initials(project.name)}
+            </span>
+          </div>
+        )}
+      </div>
     </article>
   );
 }
