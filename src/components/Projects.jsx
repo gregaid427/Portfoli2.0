@@ -24,17 +24,14 @@ function WebGallery({ images, alt }) {
 
   return (
     <div>
-      <div className="h-40 sm:h-48 rounded-xl overflow-hidden border border-violet-glow/20 bg-ink flex items-center justify-center">
-        <img src={hero} alt={alt} className="h-full w-full object-contain" />
+      <div className="rounded-xl overflow-hidden border border-violet-glow/20">
+        <img src={hero} alt={alt} className="w-full h-auto" />
       </div>
       {rest.length > 0 && (
         <div className="mt-2 grid grid-cols-2 gap-2">
           {rest.map((src) => (
-            <div
-              key={src}
-              className="h-20 sm:h-24 rounded-lg overflow-hidden border border-violet-glow/20 bg-ink flex items-center justify-center"
-            >
-              <img src={src} alt={alt} className="h-full w-full object-contain" />
+            <div key={src} className="rounded-lg overflow-hidden border border-violet-glow/20">
+              <img src={src} alt={alt} className="w-full h-auto" />
             </div>
           ))}
         </div>
@@ -47,10 +44,7 @@ function MobileGallery({ images, alt }) {
   return (
     <div className="flex flex-wrap gap-2">
       {images.map((src) => (
-        <div
-          key={src}
-          className="w-[30%] min-w-[5.5rem] rounded-xl overflow-hidden border border-violet-glow/20 bg-ink"
-        >
+        <div key={src} className="w-20 sm:w-24 rounded-xl overflow-hidden border border-violet-glow/20">
           <img src={src} alt={alt} className="w-full h-auto" />
         </div>
       ))}
