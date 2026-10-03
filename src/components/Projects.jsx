@@ -20,7 +20,7 @@ const GRADIENTS = [
 ];
 
 function WebGallery({ images, alt }) {
-  const [hero, ...rest] = images;
+  const [hero, ...rest] = images.slice(0, 3);
 
   return (
     <div>
