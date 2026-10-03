@@ -118,6 +118,7 @@ export const projects = [
   {
     name: "Tribes Premium",
     type: "web",
+    group: "tribes-premium",
     stack: ["React.js", "Node.js", "Tailwind CSS"],
     description:
       "Storefront for a premium spirits brand — product catalog with direct checkout, order tracking, and an events hub for tastings and pop-ups.",
@@ -131,6 +132,7 @@ export const projects = [
   {
     name: "Tribes Premium Mobile",
     type: "mobile",
+    group: "tribes-premium",
     stack: ["Flutter", "Dart"],
     description:
       "Companion app for browsing the catalog, checking out as a guest, tracking events, and watching mixology recipes.",
@@ -146,6 +148,7 @@ export const projects = [
   {
     name: "Tripstoghana",
     type: "web",
+    group: "tripstoghana",
     stack: ["React.js", "Node.js"],
     description:
       "Tourism booking platform for exploring and booking experiences across Ghana, with dedicated admin and tour-guide portals.",
@@ -159,6 +162,7 @@ export const projects = [
   {
     name: "Tripstoghana Mobile",
     type: "mobile",
+    group: "tripstoghana",
     stack: ["Flutter", "Dart"],
     description: "Mobile companion for browsing tours and booking experiences on the move.",
     links: [
@@ -246,6 +250,7 @@ export const projects = [
   {
     name: "Pentpreneur Church Business App",
     type: "web",
+    group: "pentpreneur",
     stack: ["React.js", "Node.js"],
     description:
       "Business directory and networking platform for a church-run entrepreneur network, with an admin control panel for managing businesses, products, and events.",
@@ -258,6 +263,7 @@ export const projects = [
   {
     name: "Pentpreneur Church Business App Mobile",
     type: "mobile",
+    group: "pentpreneur",
     stack: ["Flutter", "Dart"],
     description:
       "Companion app for browsing business categories, managing listings, and updating a business profile on the go.",

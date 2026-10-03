@@ -1,5 +1,4 @@
-import { useState } from "react";
-import { ChevronLeft, ChevronRight, ExternalLink, Globe, Smartphone } from "lucide-react";
+import { ExternalLink, Globe, Smartphone } from "lucide-react";
 import { projects } from "../data/portfolio";
 
 function initials(name) {
@@ -20,69 +19,49 @@ const GRADIENTS = [
   "from-violet-glow to-violet-deep",
 ];
 
-function ImageSlider({ images, alt, perView = 1 }) {
-  const [page, setPage] = useState(0);
-  const pageCount = Math.ceil(images.length / perView);
-
-  const prev = () => setPage((p) => (p - 1 + pageCount) % pageCount);
-  const next = () => setPage((p) => (p + 1) % pageCount);
-
-  const visible = images.slice(page * perView, page * perView + perView);
+function WebGallery({ images, alt }) {
+  const [hero, ...rest] = images;
 
   return (
-    <div className="absolute inset-0 overflow-hidden bg-ink">
-      <div className="flex h-full gap-1">
-        {visible.map((src, i) => (
-          <div key={`${page}-${i}`} className="h-full flex-1 min-w-0 flex items-center justify-center bg-surface-2">
-            <img src={src} alt={alt} className="h-full w-full object-contain" />
-          </div>
-        ))}
+    <div className="max-w-xl">
+      <div className="rounded-xl overflow-hidden border border-violet-glow/20 bg-surface-2">
+        <img src={hero} alt={alt} className="w-full h-auto max-h-56 object-cover" />
       </div>
-
-      {pageCount > 1 && (
-        <>
-          <button
-            type="button"
-            onClick={prev}
-            aria-label="Previous image"
-            className="absolute left-3 top-1/2 -translate-y-1/2 flex h-10 w-10 items-center justify-center rounded-full bg-iris text-white border border-iris shadow-lg shadow-black/40 hover:bg-violet-deep hover:border-violet-deep transition-colors"
-          >
-            <ChevronLeft size={20} />
-          </button>
-          <button
-            type="button"
-            onClick={next}
-            aria-label="Next image"
-            className="absolute right-3 top-1/2 -translate-y-1/2 flex h-10 w-10 items-center justify-center rounded-full bg-iris text-white border border-iris shadow-lg shadow-black/40 hover:bg-violet-deep hover:border-violet-deep transition-colors"
-          >
-            <ChevronRight size={20} />
-          </button>
-
-          <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5">
-            {Array.from({ length: pageCount }).map((_, i) => (
-              <button
-                key={i}
-                type="button"
-                onClick={() => setPage(i)}
-                aria-label={`Go to image ${i + 1}`}
-                className={`h-1.5 rounded-full transition-all ${
-                  i === page ? "w-5 bg-white" : "w-1.5 bg-white/40 hover:bg-white/70"
-                }`}
-              />
-            ))}
-          </div>
-        </>
+      {rest.length > 0 && (
+        <div className="mt-2 grid grid-cols-2 gap-2">
+          {rest.map((src) => (
+            <div key={src} className="rounded-lg overflow-hidden border border-violet-glow/20 bg-surface-2">
+              <img src={src} alt={alt} className="w-full h-auto max-h-28 object-cover" />
+            </div>
+          ))}
+        </div>
       )}
+    </div>
+  );
+}
+
+function MobileGallery({ images, alt }) {
+  return (
+    <div className="flex gap-3 overflow-x-auto pb-1">
+      {images.map((src) => (
+        <div
+          key={src}
+          className="shrink-0 w-28 sm:w-32 rounded-2xl overflow-hidden border border-violet-glow/20 bg-surface-2"
+        >
+          <img src={src} alt={alt} className="w-full h-auto" />
+        </div>
+      ))}
     </div>
   );
 }
 
 function ProjectCard({ project, gradient }) {
   const isMobile = project.type === "mobile";
+  const hasImages = project.images?.length > 0;
 
   return (
-    <article className="h-full min-h-[26rem] sm:min-h-[28rem] glow-card rounded-2xl overflow-hidden flex flex-col sm:flex-row hover:border-violet-glow/40 transition-colors">
-      <div className="sm:w-[38%] shrink-0 p-5 flex flex-col gap-3">
+    <article className="glow-card rounded-2xl p-6 flex flex-col gap-5 hover:border-violet-glow/40 transition-colors">
+      <div>
         <div className="flex flex-wrap items-center gap-1.5">
           <span className="inline-flex w-fit items-center gap-1.5 rounded-full bg-violet-glow/10 border border-violet-glow/20 px-2.5 py-1 text-[11px] font-medium text-mist/85">
             {isMobile ? <Smartphone size={12} /> : <Globe size={12} />}
@@ -95,9 +74,9 @@ function ProjectCard({ project, gradient }) {
           )}
         </div>
 
-        <h3 className="font-display font-semibold text-white text-base leading-snug">{project.name}</h3>
+        <h3 className="mt-3 font-display font-semibold text-white text-lg leading-snug">{project.name}</h3>
 
-        <div className="flex flex-wrap gap-1.5">
+        <div className="mt-3 flex flex-wrap gap-1.5">
           {project.stack.map((s) => (
             <span
               key={s}
@@ -108,42 +87,46 @@ function ProjectCard({ project, gradient }) {
           ))}
         </div>
 
-        <p className="text-sm text-mist/70 leading-relaxed">{project.description}</p>
+        <p className="mt-3 text-sm text-mist/70 leading-relaxed max-w-2xl">{project.description}</p>
 
         {project.links?.length > 0 && (
-          <div className="mt-auto flex flex-col gap-1.5 pt-2">
+          <div className="mt-3 flex flex-col gap-1.5">
             <span className="text-[11px] font-semibold uppercase tracking-wide text-mist/60">
               {isMobile ? "Get the app" : "View live project"}
             </span>
-            {project.links.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                target="_blank"
-                rel="noreferrer"
-                className="inline-flex w-fit items-center gap-1.5 text-sm font-semibold text-white underline decoration-violet-glow/60 decoration-2 underline-offset-2 hover:decoration-fuchsia-glow hover:text-fuchsia-glow transition-colors"
-              >
-                {link.label}
-                <ExternalLink size={13} />
-              </a>
-            ))}
+            <div className="flex flex-wrap gap-x-5 gap-y-1.5">
+              {project.links.map((link) => (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex w-fit items-center gap-1.5 text-sm font-semibold text-white underline decoration-violet-glow/60 decoration-2 underline-offset-2 hover:decoration-fuchsia-glow hover:text-fuchsia-glow transition-colors"
+                >
+                  {link.label}
+                  <ExternalLink size={13} />
+                </a>
+              ))}
+            </div>
           </div>
         )}
       </div>
 
-      <div className="sm:w-[62%] relative min-h-[16rem]">
-        {project.images?.length > 0 ? (
-          <ImageSlider images={project.images} alt={project.name} perView={isMobile ? 2 : 1} />
+      {hasImages ? (
+        isMobile ? (
+          <MobileGallery images={project.images} alt={project.name} />
         ) : (
-          <div
-            className={`absolute inset-0 bg-gradient-to-br ${gradient} flex items-center justify-center`}
-          >
-            <span className="font-display font-extrabold text-4xl text-white/90 tracking-tight">
-              {initials(project.name)}
-            </span>
-          </div>
-        )}
-      </div>
+          <WebGallery images={project.images} alt={project.name} />
+        )
+      ) : (
+        <div
+          className={`max-w-xl h-40 rounded-xl bg-gradient-to-br ${gradient} flex items-center justify-center`}
+        >
+          <span className="font-display font-extrabold text-3xl text-white/90 tracking-tight">
+            {initials(project.name)}
+          </span>
+        </div>
+      )}
     </article>
   );
 }
