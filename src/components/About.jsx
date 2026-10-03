@@ -38,7 +38,7 @@ export default function About() {
             <p className="mt-6 text-mist/80 leading-relaxed">{profile.summary}</p>
 
             <div className="mt-8 flex flex-wrap gap-3">
-              {["Ghana 🇬🇭", "Remote-friendly", "BSc. Computer Engineering"].map((tag) => (
+              {["Ghana 🇬🇭", "Remote-friendly"].map((tag) => (
                 <span
                   key={tag}
                   className="rounded-full border border-violet-glow/25 bg-violet-glow/5 px-4 py-1.5 text-xs text-mist/85"
