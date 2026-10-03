@@ -44,7 +44,7 @@ function MobileGallery({ images, alt }) {
   return (
     <div className="flex flex-wrap gap-2">
       {images.map((src) => (
-        <div key={src} className="w-20 sm:w-24 rounded-xl overflow-hidden border border-violet-glow/20">
+        <div key={src} className="w-28 sm:w-32 rounded-xl overflow-hidden border border-violet-glow/20">
           <img src={src} alt={alt} className="w-full h-auto" />
         </div>
       ))}
