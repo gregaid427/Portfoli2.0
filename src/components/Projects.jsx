@@ -44,7 +44,7 @@ function MobileGallery({ images, alt }) {
   return (
     <div className="flex flex-wrap gap-2">
       {images.slice(0, 4).map((src) => (
-        <div key={src} className="w-32 sm:w-36 rounded-xl overflow-hidden border border-violet-glow/20">
+        <div key={src} className="w-36 sm:w-40 rounded-xl overflow-hidden border border-violet-glow/20">
           <img src={src} alt={alt} className="w-full h-auto" />
         </div>
       ))}
@@ -58,7 +58,7 @@ function ProjectCard({ project, gradient }) {
 
   return (
     <article className="glow-card rounded-2xl p-6 flex flex-col sm:flex-row gap-6 hover:border-violet-glow/40 transition-colors">
-      <div className="sm:w-[38%] shrink-0">
+      <div className="sm:w-[33%] shrink-0">
         <div className="flex flex-wrap items-center gap-1.5">
           <span className="inline-flex w-fit items-center gap-1.5 rounded-full bg-violet-glow/10 border border-violet-glow/20 px-2.5 py-1 text-[11px] font-medium text-mist/85">
             {isMobile ? <Smartphone size={12} /> : <Globe size={12} />}
@@ -109,7 +109,7 @@ function ProjectCard({ project, gradient }) {
         )}
       </div>
 
-      <div className="sm:w-[62%] min-w-0">
+      <div className="sm:w-[67%] min-w-0">
         {hasImages ? (
           isMobile ? (
             <MobileGallery images={project.images} alt={project.name} />
