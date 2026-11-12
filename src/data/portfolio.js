@@ -1,3 +1,10 @@
+import cfmWeb1 from "../assets/projects/cfm-web-1.jpg";
+import cfmWeb2 from "../assets/projects/cfm-web-2.jpg";
+import cfmWeb3 from "../assets/projects/cfm-web-3.jpg";
+import cfmMobile1 from "../assets/projects/cfm-mobile-1.jpg";
+import cfmMobile2 from "../assets/projects/cfm-mobile-2.jpg";
+import cfmMobile3 from "../assets/projects/cfm-mobile-3.jpg";
+import cfmMobile4 from "../assets/projects/cfm-mobile-4.jpg";
 import tribesWeb1 from "../assets/projects/tribes-premium-web-1.jpg";
 import tribesWeb2 from "../assets/projects/tribes-premium-web-2.jpg";
 import tribesWeb3 from "../assets/projects/tribes-premium-web-3.jpg";
@@ -49,6 +56,13 @@ import fortegateCollect1 from "../assets/projects/fortegate-collect-1.jpg";
 import fortegateCollect2 from "../assets/projects/fortegate-collect-2.jpg";
 import dataplugWeb1 from "../assets/projects/dataplug-web-1.jpg";
 import dataplugWeb2 from "../assets/projects/dataplug-web-2.jpg";
+import yestailorWeb1 from "../assets/projects/yestailor-web-1.jpg";
+import yestailorWeb2 from "../assets/projects/yestailor-web-2.jpg";
+import yestailorWeb3 from "../assets/projects/yestailor-web-3.jpg";
+import yestailorMobile1 from "../assets/projects/yestailor-mobile-1.jpg";
+import yestailorMobile2 from "../assets/projects/yestailor-mobile-2.jpg";
+import yestailorMobile3 from "../assets/projects/yestailor-mobile-3.jpg";
+import yestailorMobile4 from "../assets/projects/yestailor-mobile-4.jpg";
 
 export const profile = {
   name: "Gregory Aidoo",
@@ -116,6 +130,26 @@ export const skillGroups = [
 
 export const projects = [
   {
+    name: "Christian Fidelity Ministry",
+    type: "web",
+    group: "cfm",
+    stack: ["React.js", "Node.js"],
+    description:
+      "Church management system for an entire ministry — a public website plus a headquarters portal and individual branch portals for members, first timers, branch profiles, the ministry tree, and admin activity.",
+    links: [{ label: "cfint.org", href: "https://cfint.org" }],
+    images: [cfmWeb1, cfmWeb2, cfmWeb3],
+  },
+  {
+    name: "Christian Fidelity Ministry Mobile",
+    type: "mobile",
+    group: "cfm",
+    stack: ["Flutter", "Dart"],
+    description:
+      "Branch admin app for recording services, giving, expenses, first timers, and members on the go, with attendance tracking and multi-branch portal switching.",
+    links: [],
+    images: [cfmMobile1, cfmMobile2, cfmMobile3, cfmMobile4],
+  },
+  {
     name: "Tribes Premium",
     type: "web",
     group: "tribes-premium",
@@ -173,6 +207,26 @@ export const projects = [
       },
     ],
     images: [tripstoghanaMobile1, tripstoghanaMobile2, tripstoghanaMobile3, tripstoghanaMobile4],
+  },
+  {
+    name: "YesTailor",
+    type: "web",
+    group: "yestailor",
+    stack: ["React.js", "Node.js"],
+    description:
+      "Shop-management platform for tailors, seamstresses, and fashion houses — customers and measurements, orders and fittings, invoices, and finances in one workroom.",
+    links: [{ label: "YesTailor", href: "http://38.242.225.173:8081/" }],
+    images: [yestailorWeb1, yestailorWeb2, yestailorWeb3],
+  },
+  {
+    name: "YesTailor Mobile",
+    type: "mobile",
+    group: "yestailor",
+    stack: ["Flutter", "Dart"],
+    description:
+      "Companion app for taking measurements at the customer's door, tracking upcoming fittings, and keeping orders and payments in sync with the web workroom.",
+    links: [],
+    images: [yestailorMobile1, yestailorMobile2, yestailorMobile3, yestailorMobile4],
   },
   {
     name: "DataPlug Africa",
