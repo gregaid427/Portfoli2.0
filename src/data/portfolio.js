@@ -69,7 +69,7 @@ export const profile = {
   role: "Full Stack Web & Mobile Developer",
   location: "Accra, Ghana",
   email: "gregoryd427@gmail.com",
-  phone: "+233 24 110 2959",
+  phone: "+233 20 117 3130",
   github: "https://github.com/gregaid427",
   site: "https://gregory-aidoo.vercel.app",
   tagline:
