@@ -42,9 +42,9 @@ function WebGallery({ images, alt }) {
 
 function MobileGallery({ images, alt }) {
   return (
-    <div className="flex flex-wrap gap-2">
+    <div className="flex flex-nowrap sm:flex-wrap gap-3 sm:gap-2 overflow-x-auto sm:overflow-visible snap-x snap-mandatory sm:snap-none -mx-6 px-6 sm:mx-0 sm:px-0 pb-2 sm:pb-0">
       {images.slice(0, 4).map((src) => (
-        <div key={src} className="w-36 sm:w-40 rounded-xl overflow-hidden border border-violet-glow/20">
+        <div key={src} className="w-[62%] max-w-[240px] sm:w-40 shrink-0 snap-center rounded-xl overflow-hidden border border-violet-glow/20">
           <img src={src} alt={alt} className="w-full h-auto" />
         </div>
       ))}

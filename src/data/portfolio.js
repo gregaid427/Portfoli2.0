@@ -135,7 +135,7 @@ export const projects = [
     group: "cfm",
     stack: ["React.js", "Node.js"],
     description:
-      "Church management system for an entire ministry — a public website plus a headquarters portal and individual branch portals for members, first timers, branch profiles, the ministry tree, and admin activity.",
+      "Church management system for an entire ministry — a public website plus a headquarters portal and individual branch portals for churches, members, first timers, branch profiles, the ministry tree, and admin activity.",
     links: [{ label: "cfint.org", href: "https://cfint.org" }],
     images: [cfmWeb1, cfmWeb2, cfmWeb3],
   },
@@ -169,7 +169,7 @@ export const projects = [
     group: "tribes-premium",
     stack: ["Flutter", "Dart"],
     description:
-      "Companion app for browsing the catalog, checking out as a guest, tracking events, and watching mixology recipes.",
+      "Companion app for browsing the catalog, checking out as a guest, making and tracking orders, following events, and watching mixology recipes.",
     links: [
       { label: "App Store", href: "https://apps.apple.com/gh/app/tribes-premium/id6799750544" },
       {
@@ -178,6 +178,20 @@ export const projects = [
       },
     ],
     images: [tribesMobile1, tribesMobile2, tribesMobile3, tribesMobile4],
+  },
+  {
+    name: "Skye Bank App",
+    type: "mobile",
+    stack: ["Flutter", "Dart"],
+    description:
+      "Consumer banking app covering transfers, loans, investments, beneficiaries, and bill payments across three countries.",
+    links: [
+      {
+        label: "Play Store",
+        href: "https://play.google.com/store/apps/details?id=com.skyecapital.mobile.prod",
+      },
+    ],
+    images: [skyebankMobile1, skyebankMobile2, skyebankMobile3, skyebankMobile4],
   },
   {
     name: "Tripstoghana",
@@ -239,20 +253,6 @@ export const projects = [
       { label: "Admin", href: "https://dataplugafrica.com/admin.php" },
     ],
     images: [dataplugWeb1, dataplugWeb2],
-  },
-  {
-    name: "Skye Bank App",
-    type: "mobile",
-    stack: ["Flutter", "Dart"],
-    description:
-      "Consumer banking app covering transfers, loans, investments, beneficiaries, and bill payments across three countries.",
-    links: [
-      {
-        label: "Play Store",
-        href: "https://play.google.com/store/apps/details?id=com.skyecapital.mobile.prod",
-      },
-    ],
-    images: [skyebankMobile1, skyebankMobile2, skyebankMobile3, skyebankMobile4],
   },
   {
     name: "Fortegate Survey Application",
